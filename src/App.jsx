@@ -1,6 +1,5 @@
 import React from "react";
 import { ItemList } from "./components/ItemList";
-
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import {Contact} from "./components/Contact";
