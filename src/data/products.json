@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "name": "Dog Chow",
+    "price": 1000,
+    "imgUrl": "./images/catchow.jpg"
+  },
+  {
+    "id": 2,
+    "name": "catchow",
+    "price": 8000,
+    "imgUrl": "./images/catchow.jpg"
+  },
+  {
+    "id": 3,
+    "name": "pedigre",
+    "price": 4000,
+    "imgUrl": "./images/pedigre.jpg"
+  }
+  
+]

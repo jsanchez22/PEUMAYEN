@@ -1,0 +1,135 @@
+nav {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-primary{
+  display: flex;
+  justify-content: space-around;  
+  align-items: center;
+  width: 100%;
+}
+
+.title-page{
+  color:#ddd;
+  font-size:40px;
+  text-decoration: none; 
+  color: inherit;
+
+}
+.cart-icon{
+  color:#ddd;
+  text-decoration: none;
+  list-style: none;
+}
+.logo-page{
+  width: 50px;
+}
+.nav-secondary {
+  display: flex;
+  list-style: none;
+  cursor: pointer;
+  justify-content: space-around;
+    
+}
+.menu{
+  display: flex;
+  flex-direction: row;
+  padding: 2px;  
+  justify-content: space-around;
+}
+.menu  li{
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  list-style: none;
+}
+
+
+.menu li:hover{
+  background-color: #337ab7;
+
+}
+
+
+.link{
+  text-decoration: none; 
+  color: inherit;
+}
+/******** Items List ******/
+
+.items-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+/****** Item  box *********/
+.item-box {
+  background-color: #fff;
+  margin: 10px;
+  padding: 20px;
+  width: 110px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.item-quantity {
+  color: #fff;
+  background-color:black;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  max-width: 30px;
+  position: relative;
+  left: 40px;
+}
+
+.item-price {
+  color: gray;
+}
+
+.item-add-button {
+  background-color: #5cb85c;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  font-size: 11px;
+  cursor: pointer;
+  height: 20px;
+}
+
+.item-minus-button {
+  background-color: #d9534f;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.item-plus-button {
+  background-color: #337ab7;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+/****** Shopping Cart ********/
+
+.cart-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.cart-count {
+  background-color: blue;
+  border-radius: 20px;
+  padding: 8px;
+}
