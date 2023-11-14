@@ -27,7 +27,7 @@ export const Navbar = () => {
       <div className="nav-secondary">
           <ul className="menu">
           <Link to={"/"} className="link" ><li>Inicio</li> </Link>
-          <Link to={"/"} className="link"> <li>Quienes Somos</li> </Link>
+          <Link to={"/quienes-somos"} className="link"> <li>Quienes Somos</li> </Link>
           <Link to={"/contact"} className="link"> <li>Contacto</li> </Link>
           </ul>
       </div>

@@ -9,7 +9,7 @@ export const ShoppingCart = () => {
   }, 0);
 
   const totalPrice = cart.reduce(
-    (acc, curr) => acc + curr.quantity * curr.price,
+    (acc, curr) => acc + curr.quantity * curr.Precio,
     0
   );
 

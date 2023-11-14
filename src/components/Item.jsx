@@ -1,33 +1,33 @@
 import React, { useContext } from "react";
 import { CartContext } from "../contexts/ShoppingCartContext";
 
-export const Item = ({ name, price, id, imgUrl }) => {
+export const Item = ({ pk_articulos, titulo, description, Precio , cantpk_articulosad ,img }) => {
   const [cart, setCart] = useContext(CartContext);
 
   const addToCart = () => {
     setCart((currItems) => {
-      const isItemsFound = currItems.find((item) => item.id === id);
+      const isItemsFound = currItems.find((item) => item.pk_articulos === pk_articulos);
       if (isItemsFound) {
         return currItems.map((item) => {
-          if (item.id === id) {
+          if (item.pk_articulos === pk_articulos) {
             return { ...item, quantity: item.quantity + 1 };
           } else {
             return item;
           }
         });
       } else {
-        return [...currItems, { id, quantity: 1, price }];
+        return [...currItems, { pk_articulos, quantity: 1, Precio }];
       }
     });
   };
 
-  const removeItem = (id) => {
+  const removeItem = (pk_articulos) => {
     setCart((currItems) => {
-      if (currItems.find((item) => item.id === id)?.quantity === 1) {
-        return currItems.filter((item) => item.id !== id);
+      if (currItems.find((item) => item.pk_articulos === pk_articulos)?.quantity === 1) {
+        return currItems.filter((item) => item.pk_articulos !== pk_articulos); 
       } else {
         return currItems.map((item) => {
-          if (item.id === id) {
+          if (item.pk_articulos === pk_articulos) {
             return { ...item, quantity: item.quantity - 1 };
           } else {
             return item;
@@ -37,18 +37,18 @@ export const Item = ({ name, price, id, imgUrl }) => {
     });
   };
 
-  const getQuantityById = (id) => {
-    return cart.find((item) => item.id === id)?.quantity || 0;
+  const getQuantityBypk_articulos = (pk_articulos) => {
+    return cart.find((item) => item.pk_articulos === pk_articulos)?.quantity || 0;
   };
 
-  const quantityPerItem = getQuantityById(id);
+  const quantityPerItem = getQuantityBypk_articulos(pk_articulos);
 
   return (
     <div className="item-box">
       
-      <div>{name}</div>
-      <img src={imgUrl} width="80" height="55" />
-      <div className="item-price">${price}</div>
+      <div>{titulo}</div>
+      <img src={img} width="80" height="55" />
+      <div className="item-price">${Precio}</div>
 
       {quantityPerItem === 0 ? (
         <button className="item-add-button" onClick={() => addToCart()}>
@@ -61,7 +61,7 @@ export const Item = ({ name, price, id, imgUrl }) => {
       )}
 
       {quantityPerItem > 0 && (
-        <button className="item-minus-button" onClick={() => removeItem(id)}>
+        <button className="item-minus-button" onClick={() => removeItem(pk_articulos)}>
           -Quitar item
         </button>
       )}
