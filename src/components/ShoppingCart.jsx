@@ -16,9 +16,46 @@ export const ShoppingCart = () => {
   return (
     <div className="cart-container">
       <div>
-        <div>Productos en carrito: {quantity}</div>
-        <div>Total: ${totalPrice}</div>
-        <button onClick={() => console.log(cart)}>Checkout</button>
+        
+        {cart.length > 0 ? (
+          <div>
+          <div className="precio-total">Carrito-productos: {quantity} u.</div>
+        <table>
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio Unitario</th>
+        <th>Precio Total</th>
+      </tr>
+    </thead>
+    <tbody>
+        {cart.map((product, idx) => (
+          <tr key={idx}>
+        <td>{product.titulo}</td>
+        <td>{product.quantity}</td>
+        <td>${product.Precio}</td>
+        <td>${product.Precio*product.quantity}</td>
+      </tr>
+        
+      ))}
+      </tbody>
+  </table>
+  <div className="comprar">
+        <label className="precio-total">Total: ${totalPrice}</label><br/>
+        <label>Ingresar correo para continuar con la compra</label><br/>
+        <input type="email" className="mail" placeholder="ingresar correo" name="email"></input><br/>
+        <button className="boton-compra" onClick={() => console.log(cart)}>COMPRAR</button>
+        </div>
+        </div>
+  ) : (
+      <div className="carrito-vacio">
+        <label>El carrito está vacío.</label>          
+        <br/>
+        <label>Agrega productos para continuar.</label>
+      </div>
+    )}
+        
       </div>
     </div>
   );

@@ -6,8 +6,9 @@ nav {
   color: #fff;
   display: flex;
   flex-direction: column;
-  text-decoration: 'none',
-  
+  text-decoration: 'none';
+  user-select: none ;
+
 }
 
 .nav-primary{
@@ -15,7 +16,7 @@ nav {
   justify-content: space-around;  
   align-items: center;
   width: 100%;
-  text-decoration: 'none',
+  text-decoration: 'none';
 
 }
 
@@ -69,7 +70,9 @@ nav {
 
 .items-list {
   display: flex;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   justify-content: space-around;
+  font-weight: bolder;
   flex-wrap: wrap;
   text-align: center;
   padding: 0 3rem;
@@ -86,14 +89,13 @@ nav {
 }
 
 .item-quantity {
+  margin: 0 3rem;
+  background-color: black;
+  border-radius: 5px;
   color: #fff;
-  background-color:black;
-  display: flex;
-  justify-content: center;
-  border-radius: 20px;
-  max-width: 30px;
-  position: relative;
-  left: 40px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 .item-price {
@@ -105,9 +107,9 @@ nav {
   border-radius: 5px;
   color: #fff;
   border: none;
-  font-size: 11px;
+  font-size: 14px;
   cursor: pointer;
-  height: 20px;
+  height: 40px;
 }
 
 .item-minus-button {
@@ -115,7 +117,7 @@ nav {
   border-radius: 5px;
   color: #fff;
   border: none;
-  font-size: 11px;
+  font-size: 12px;
   cursor: pointer;
 }
 
@@ -124,7 +126,7 @@ nav {
   border-radius: 5px;
   color: #fff;
   border: none;
-  font-size: 11px;
+  font-size: 12px;
   cursor: pointer;
 }
 
@@ -177,7 +179,8 @@ nav {
   flex-direction: row;
   border-style: solid;
   border-color: white;
-  justify-content: space-around;
+  justify-content: space-around;  
+  border-radius: 10px;
 }
 /****** Footer ********/
 .footer{
@@ -186,4 +189,86 @@ nav {
   align-items: center;
   width: 100%;
   height: 80px;
+  
+}
+.redes{
+  height: 30px;
+}
+
+/****** carrito tabla ********/
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.carrito-vacio{
+  margin: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  color: #ddd;
+  background-color: #000;
+  display: flex;
+  font-size: 4rem;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border-style: solid;
+  border-color: green;
+  border-radius: 8px;
+  user-select: none ;
+}
+.comprar {
+  background-color: #f2f2f2;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.precio-total {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+.mail {
+  width: 80%;
+  padding: 8px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.boton-compra {
+  background-color: hsl(122, 39%, 49%);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.boton-compra:hover {
+  background-color: #45a049;
+}
+
+@media only screen and (max-width: 1000px) {
+  .carrito-vacio{
+    font-size: 2rem; 
+    padding: 1rem;
+    margin: 1rem;
+  }
 }

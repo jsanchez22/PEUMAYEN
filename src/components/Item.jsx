@@ -16,7 +16,7 @@ export const Item = ({ pk_articulos, titulo, description, Precio , cantpk_articu
           }
         });
       } else {
-        return [...currItems, { pk_articulos, quantity: 1, Precio }];
+        return [...currItems, { pk_articulos, titulo, quantity: 1, Precio }];
       }
     });
   };
@@ -67,7 +67,7 @@ export const Item = ({ pk_articulos, titulo, description, Precio , cantpk_articu
       )}
 
       {quantityPerItem > 0 && (
-        <div className="item-quantity">{quantityPerItem}</div>
+        <div className="item-quantity">{quantityPerItem} u.</div>
       )}
 
     </div>

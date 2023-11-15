@@ -12,7 +12,7 @@ export const App = () => {
   return (
     <ShoppingCartProvider>
       <Router>
-        <Navbar />
+        <Navbar/>
         <Routes>
           <Route path="/" element={<ItemList />} />
           <Route path="/cart" element={<ShoppingCart />} />
