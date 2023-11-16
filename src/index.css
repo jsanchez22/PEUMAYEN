@@ -5,6 +5,8 @@ nav {
   background-color: #000;
   color: #fff;
   display: flex;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 18px;;
   flex-direction: column;
   text-decoration: 'none';
   user-select: none ;
@@ -19,7 +21,10 @@ nav {
   text-decoration: 'none';
 
 }
-
+.title-productos{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+}
 .title-page{
   color:#ddd;
   font-size:40px;
@@ -80,7 +85,7 @@ nav {
 
 /****** Item  box *********/
 .item-box {
-  background-color: #fff;
+  background-color: bisque;
   margin: 10px;
   padding: 20px;
   width: 150px;
@@ -265,6 +270,21 @@ th {
   background-color: #45a049;
 }
 
+/****** compra realizada ********/
+
+.compra-realizada{
+  margin: 3rem;
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+  font-size: 25px;
+  text-align: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:white;
+  height: 180px;
+  border-radius: 15px;
+
+background-color: #5cb85c;
+}
 @media only screen and (max-width: 1000px) {
   .carrito-vacio{
     font-size: 2rem; 

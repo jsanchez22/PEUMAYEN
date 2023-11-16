@@ -8,9 +8,6 @@ export const Navbar = () => {
   const quantity = cart.reduce((acc, curr) => {
     return acc + curr.quantity;
   }, 0);
-
-
-
   return (
     <nav>
       <div className="nav-primary">

@@ -21,8 +21,10 @@ export const ItemList = () => {
   }, []); 
 
 
-  return (
+  return (<div>
+    <h1 className="title-productos">PRODUCTOS</h1>
     <div className="items-list">
+    
     {Array.isArray(datos) ? (
       datos.map((product, idx) => (
         <Item key={product.pk_articulos} {...product} />
@@ -31,6 +33,7 @@ export const ItemList = () => {
       <p>No se pudieron cargar los datos.</p>
     )}
     
+  </div>
   </div>
   );
 };

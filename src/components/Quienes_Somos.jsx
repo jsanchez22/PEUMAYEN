@@ -6,7 +6,7 @@ export const Quienes_Somos = () => {
         <div class="">
     <div >
       <h1 className="subtitle">Quiénes Somos - Peumayen</h1>
-      <p class="lead">En Peumayen, nos dedicamos con pasión a proporcionar alimentos de alta calidad para el bienestar y la felicidad de tus mascotas. Fundada en [Año de Fundación], nuestra empresa ha evolucionado para convertirse en un referente en la industria de alimentos para animales, enfocándonos en la calidad, la innovación y la satisfacción del cliente.</p>
+      <p class="lead">En Peumayen, nos dedicamos con pasión a proporcionar alimentos de alta calidad para el bienestar y la felicidad de tus mascotas. Fundada en 2023, nuestra empresa ha evolucionado para convertirse en un referente en la industria de alimentos para animales, enfocándonos en la calidad, la innovación y la satisfacción del cliente.</p>
     </div>
 
     <div class="row">
